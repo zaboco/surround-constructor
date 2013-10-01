@@ -2,9 +2,7 @@
   "name": "surround-constructor",
   "version": "0.0.1",
   "description": "surround-constructor module",
-  "dependencies": {
-    "prelude-ls": "~1.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-watch": "~0.5.3",
