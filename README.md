@@ -22,7 +22,7 @@ SClass = surround-constructor SomeClass[, after: a_fn][, before: b_fn]
 _Vanilla JS_
 ```js
 surround-constructor = require('surround-constructor');
-SClass = surround-constructor(SomeClass) # does nothing
+SClass = surround-constructor(SomeClass) // does nothing
 SClass = surround-constructor(SomeClass, { before: do_before_fn });
 SClass = surround-constructor(SomeClass, { after: do_after_fn });
 SClass = surround-constructor(SomeClass, { before: b_fn, after: a_fn });
@@ -30,7 +30,7 @@ SClass = surround-constructor(SomeClass, { before: b_fn, after: a_fn });
 
 All the callbacks calls get the constructor arguments
 
-### Examples _(in LiveScript)_
+### Examples
 
 #### Basic Usage
 ```ls
@@ -50,7 +50,7 @@ new SurroundedClass
 ```
 
 #### Class extension: logging
-```
+```ls
 logging = (klass) ->
   surround-constructor klass, after: (...args)->
     console.log "#{klass.name} constructor called with #args"
