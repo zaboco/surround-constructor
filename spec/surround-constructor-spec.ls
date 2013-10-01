@@ -6,7 +6,7 @@ expect = require \chai .use (require \sinon-chai) .expect
 
 that = it
 
-var SKlass
+var SKlass, TmpKlass
 
 class Klass
 SOME_VALUE = 1
@@ -43,6 +43,15 @@ hook-suite = (position) -> ->
 
 describe \surround-constructor ->
   before-each reset-spies
+  describe 'class variable are kept' ->
+    before-each ->
+      SKlass := surround-constructor class _TmpKlass
+        @value = 1
+      TmpKlass := _TmpKlass
+    that 'in original class' ->
+      expect TmpKlass.value .to.eql 1
+    that 'in surrounding class' ->
+      expect SKlass.value .to.eql 1
   describe 'w/ no hooks' ->
     before-each ->
       SKlass := surround-constructor Klass
