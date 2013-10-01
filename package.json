@@ -26,8 +26,10 @@
     "url": "git@github.com:zaboco/surround-constructor.git"
   },
   "keywords": [
-    "util",
-    "library"
+    "surround",
+    "constructor",
+    "hook",
+    "filter"
   ],
   "author": "Bogdan Zaharia",
   "license": "MIT",
